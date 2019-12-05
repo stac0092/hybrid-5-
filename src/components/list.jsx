@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './list.css' ;
+import { FaRegEdit } from "react-icons/fa";
+import { FaRegTrashAlt } from "react-icons/fa";
+
 
 
 
@@ -43,27 +46,34 @@ class List extends Component{
                              ref={listItemsInput => this.listItemsInput = listItemsInput}/>
                              <button>Save</button>
                              <input type="button" value="Cancel" onClick={() => this.setState({ isEdit: false})}/>
-                     </form>        
+                     </form>  
+                    <div className="listItems">
+                        <p>{this.listItems}</p>  
+                    </div> 
                     <div className="close" onClick={() => this.handleRemoveListItem(this.listID)}> 
-                    &#10006;
+                   <FaRegTrashAlt/>
                     </div> 
                     <div className="update" onClick={() => this.handleUpdateListItem(this.listID)}> 
-                    &#9986;
+                    <FaRegEdit/>
                     </div> 
-                    <p className="listItems">{this.listItems}</p>
+                    
                     </div>
 
                     )
                         : (
-                           
                     <div className="list">
-                    <div className="close" onClick={() => this.handleRemoveListItem(this.listID)}> 
-                    &#10006;
-                    </div> 
-                    <div className="update" onClick={() => this.handleUpdateListItem(this.listID)}> 
-                    &#9986;
-                    </div> 
-                    <p className="listItems">{this.listItems}</p>
+                        <div className="listItems">
+                            <p>{this.listItems}</p>  
+                        </div>
+                        <div>
+                            <div className="close" onClick={() => this.handleRemoveListItem(this.listID)}> 
+                                <FaRegTrashAlt/>
+                            </div> 
+                            <div className="update" onClick={() => this.handleUpdateListItem(this.listID)}> 
+                                <FaRegEdit/>
+                            </div> 
+                        </div>
+                        
                     </div>
          ) }
          </>

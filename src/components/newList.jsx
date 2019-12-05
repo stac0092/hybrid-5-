@@ -1,5 +1,5 @@
 import React , { Component }from 'react';
-
+import './list.css' ;
 
 class NewList extends Component{
     constructor(props){
@@ -35,7 +35,7 @@ class NewList extends Component{
             <div className="addWrapper">
                 <input className="addList" value={this.state.newListItem}
                 onChange={this.handleListItem}/>
-                <button className="listButton" onClick={this.makeList}>Add Damaged Item</button>
+                <button type="submit" className="listButton" onClick={this.makeList}>Add Damaged Item</button>
             </div>
         )
     }

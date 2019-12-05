@@ -1,32 +1,53 @@
 .list {
-  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 650px;
   max-width: 960px;
-  padding: 30px;
   background: #fff;
+  padding: 2.5rem;
   border-radius: 25px;
-  padding-bottom: 10px;
-}
-  
-.listItems{
-  font-size: 20px;
-  font-weight: bold;
-  background: linear-gradient(to right, #7927b2, #fb3182);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  max-width: 400px;
-  text-transform: uppercase;
-  position: relative;
-  top: -35px;
+  margin-bottom: 15px;
 }
 
 .close{
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
+  font-size: 1.25rem;
+  color: red;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
 }
 
 .update{
-  position: relative;
+  font-size: 1.25rem;
+  color: blue;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.addWrapper{
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.5rem
+}
+
+.addList {
+  padding: 0.25rem 0.25rem;
+  border-radius: 6px;
+  margin-right: 1rem;
+}
+
+.listButton{
+  padding: 0.5rem 0.75rem;
+  background-color: #fb3182;
+  font-size: 1.1rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.listButton:hover{
+  background-color: #fd5e9e;
 }
